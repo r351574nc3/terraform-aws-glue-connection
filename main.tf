@@ -29,7 +29,6 @@ locals {
   }
 }
 
-
 data "aws_db_instance" "this" {
   db_instance_identifier = var.database_instance
 }
