@@ -7,11 +7,12 @@ module "vpc" {
   cidr_block = "172.16.0.0/16"
 
   context = module.this.context
+
 }
 
 module "glue_connection" {
-  source = "cloudposse/glue-connection/aws"
-
+  source  = "../../"
+  
   enabled = var.enabled
 
   connection_type    = var.connection_type
@@ -21,5 +22,7 @@ module "glue_connection" {
   region             = var.region
   vpc_id             = module.vpc.outputs.vpc_id
 
-  context = module.this.context
+  context = module.introspection.context
+
 }
+
