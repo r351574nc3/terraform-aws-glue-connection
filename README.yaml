@@ -50,12 +50,11 @@ references:
 
 # Short description of this project
 description: |-
-  Short
-  description
+  Glue module for creating a connection (used by a Glue Job) to a datasource.
 
 # Introduction to the project
 introduction: |-
-  This is an introduction.
+  If you are building a glue workflow with glue jobs that need to connect to RDS, you will need to first create a glue-connection and refer to that connection in the glue-job. Please see examples.
 
 # How to use this module. Should be an easy example to copy and paste.
 usage: |-
@@ -99,7 +98,9 @@ examples: |-
 
 # How to get started quickly
 quickstart: |-
-  Here's how to get started...
+  To get started quickly, determine what database, VPC the database is in, database type, region, and the type of connection you want to use. For example, we can
+  create a `JDBC` connection to a `postgres` database named `test` with instance name `test-postgres` in `us-east-2` on our `vpc-xxxxx`. Once we have this connection,
+  it can be used by glue-jobs to access the database.
 
 # Other files to include in this README from the project folder
 include:
