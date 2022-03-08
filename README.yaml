@@ -47,6 +47,9 @@ related:
 
 # List any resources helpful for someone to get started. For example, link to the hashicorp documentation or AWS documentation.
 references:
+  - name: Defining Connections in the AWS Glue Data Catalog
+    description: AWS Documentation Index for Glue Connections
+    url: https://docs.aws.amazon.com/glue/latest/dg/populate-add-connection.html
 
 # Short description of this project
 description: |-

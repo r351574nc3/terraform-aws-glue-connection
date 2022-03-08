@@ -28,8 +28,7 @@
 
 -->
 
-Short
-description
+Glue module for creating a connection (used by a Glue Job) to a datasource.
 
 ---
 
@@ -62,7 +61,7 @@ We literally have [*hundreds of terraform modules*][terraform_modules] that are 
 
 ## Introduction
 
-This is an introduction.
+If you are building a glue workflow with glue jobs that need to connect to RDS, you will need to first create a glue-connection and refer to that connection in the glue-job. Please see examples.
 
 
 ## Security & Compliance [<img src="https://cloudposse.com/wp-content/uploads/2020/11/bridgecrew.svg" width="250" align="right" />](https://bridgecrew.io/)
@@ -133,7 +132,9 @@ module "glue_connection" {
 
 ## Quick Start
 
-Here's how to get started...
+To get started quickly, determine what database, VPC the database is in, database type, region, and the type of connection you want to use. For example, we can
+create a `JDBC` connection to a `postgres` database named `test` with instance name `test-postgres` in `us-east-2` on our `vpc-xxxxx`. Once we have this connection,
+it can be used by glue-jobs to access the database.
 
 
 ## Examples
@@ -246,6 +247,7 @@ Check out these related projects.
 
 For additional context, refer to some of these links.
 
+- [Defining Connections in the AWS Glue Data Catalog](https://docs.aws.amazon.com/glue/latest/dg/populate-add-connection.html) - AWS Documentation Index for Glue Connections
 
 
 ## Help
